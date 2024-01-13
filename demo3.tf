@@ -18,3 +18,8 @@ resource "github_repository" "create_repo" {
 
   visibility = "private"
 }
+output "display_repo_name" {
+  description = "displays repo url "
+  value = github_repository.create_repo.git_clone_url
+
+}
